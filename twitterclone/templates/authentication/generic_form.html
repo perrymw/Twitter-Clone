@@ -1,0 +1,8 @@
+<h1>Django Recipes for the Downtrotten</h1>
+
+<a href=''>Back to home</a>
+<form action='' method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
