@@ -1,0 +1,14 @@
+<h1>Twango - Django driven Twitter</h1>
+<h2> Welcome {{user}} </h2>
+<a href='/addtweet/'><button> Tweet </button></a>
+<br>
+{% for thing in tweets %}
+    <br>
+    {{thing.author}}
+    <br>
+    {{thing.content}}
+    <br>
+    {{thing.post_time}}
+    <br>
+{% endfor %}
+

@@ -1,10 +1,19 @@
 from django import forms
-from twitterclone.twitterusers.models import TwitterUser
+from django.contrib.auth.forms import User
+from django.contrib.auth.forms import UserCreationForm
 
 
-class TwitterUserForm(forms.ModelForm):
+class NewUserForm(UserCreationForm):
+    first_name = forms.CharField(required=True, widget=forms.widgets.TextInput())
+    last_name = forms.CharField(required=True, widget=forms.widgets.TextInput())
+    user_name = forms.CharField(required=True, widget=forms.widgets.TextInput())
+    password = forms.CharField(required=True, widget=forms.widgets.PasswordInput())
+
     class Meta:
-        model = TwitterUser
         fields = [
-            'username'
+            'first_name',
+            'last_name',
+            'user_name',
+            'password',
         ]
+        model = User

@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from twitterclone.twitterusers import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('signup/', views.new_user_view, name='signup')
 ]
