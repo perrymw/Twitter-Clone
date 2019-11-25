@@ -1,0 +1,16 @@
+<h1>Twango - Django driven Twitter</h1>
+<h2> Welcome <a href='/profile/{{user.username}}/'>{{user}}</a> </h2>
+<nav>
+    <a href='/addtweet/'><button> Tweet </button></a>
+    <a href='/logout/'><button> Logout </button></a>
+    <a href='/notifications/'><button>Notifications: {{notification_count}}</button></a>
+</nav>
+<br>
+{% for thing in tweets %}
+    <a href='/profile/{{thing.author}}/'>{{thing.author}}</a>
+    <br>
+    {{thing.content}}
+    <br>
+    <a href='/tweet/{{thing.id}}'>{{thing.post_date}}</a>
+    <br>
+{% endfor %}
