@@ -4,6 +4,7 @@ from django.shortcuts import render,HttpResponseRedirect, reverse, HttpResponse
 from twitterclone.authentication.forms import LoginForm
 
 
+
 def login_view(request):
     html = "welcome.html"
 

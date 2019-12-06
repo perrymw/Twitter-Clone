@@ -4,10 +4,11 @@ from twitterclone.twitterusers import views
 
 
 
+
 urlpatterns = [
-    path('signup/', views.new_user_view, name='signup'),
-    path('follow/<str:username>/', views.follow_view, name='follow'),
-    path('unfollow/<str:username>/', views.unfollow_view, name='unfollow'),
-    path('profile/<str:username>/', views.profile_view, name="profile")
+    path('signup/', views.NewUserView.as_view(), name='signup'),
+    path('follow/<str:username>/', views.FollowView.as_view(), name='follow'),
+    path('unfollow/<str:username>/', views.UnfollowView.as_view(), name='unfollow'),
+    path('profile/<str:username>/', views.ProfileView.as_view(), name="profile")
 
 ]
