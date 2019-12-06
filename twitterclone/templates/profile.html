@@ -10,9 +10,11 @@
     <br>
 
 <br>
+Following: {{user.twitteruser.follows.all.count}}
 <br>
-Tweets
+Tweets: {{tweets.count}}
 <br>
+
 {% for thing in tweets %}
     <a href='/profile/{{thing.author}}/'>{{thing.author}}</a>
     <br>

@@ -8,7 +8,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
 # help received from Alec
-@login_required
 def new_user_view(request):
     html = 'generic_form.html'
     
