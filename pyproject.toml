@@ -6,7 +6,7 @@ authors = ["mwperry <perry357@outlook.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-django = "^3.0.6"
+django = "^3.1.12"
 
 [tool.poetry.dev-dependencies]
 
